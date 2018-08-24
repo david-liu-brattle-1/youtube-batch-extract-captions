@@ -12,7 +12,7 @@ yts = ydl.get_info_extractor('YoutubeSearch')
 yt_playlist = ydl.get_info_extractor('YoutubePlaylist')
 
 def get_playlist(user):
-    if not os.path.exists('NLvids.txt'):
+    if not os.path.exists(user+'.txt'):
         video_list = yt_playlist._extract_playlist(user)
         video_list = list(res[1]['entries'])
     else:
